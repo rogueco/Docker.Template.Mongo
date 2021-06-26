@@ -28,6 +28,27 @@ namespace Docker.Template.Mongo.Services.Interfaces
         /// </summary>
         /// <param name="id"></param>
         /// <returns>Single Film</returns>
-        Task<Film> GetFilmById(Guid id);
+        Task<Film> GetFilmById(string id);
+
+        /// <summary>
+        /// Create a film
+        /// </summary>
+        /// <param name="film"></param>
+        /// <returns>Created Film</returns>
+        Task CreateFilm(Film film);
+
+        /// <summary>
+        /// Updates a specified Film
+        /// </summary>
+        /// <param name="film"></param>
+        /// <returns>Updated Film</returns>
+        Task<bool> UpdateFilm(Film film);
+
+        /// <summary>
+        /// Deletes films
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>bool based on success</returns>
+        Task<bool> DeleteFilm(string id);
     }
 }
