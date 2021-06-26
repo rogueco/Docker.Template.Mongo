@@ -2,6 +2,14 @@
 
 # Part of a small series of Docker API's that have different Persisted Databases that can be used as a base template for developing. 
 
+## Run Application From Docker
+```bash
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up -d
+```
+
+Once the image has been create you can hit the URL From either: http://localhost:8001/swagger/index.html / http://host.docker.internal:8001/swagger/index.html 
+
+
 ## Creating a Docker Contained Instance of Mongo
 
 ```bash
