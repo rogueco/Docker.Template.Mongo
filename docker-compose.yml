@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  filmDb:
+    image: mongo
+    
+  docker.template.mongo:
+    image: ${DOCKER_REGISTRY-}dockertemplatemongo
+    build:
+      context: .
+      dockerfile: Docker.Template.Mongo/Dockerfile
+      
+volumes:
+  mongo_data:
